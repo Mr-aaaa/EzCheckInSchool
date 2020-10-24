@@ -12,7 +12,7 @@ stuNo = input()
 username = input()
 userid = input()
 sckey = input()
-
+token = input()
 # 时间判断
 now = (time.localtime().tm_hour + 8) % 24
 
@@ -59,6 +59,7 @@ jsons = {
 		"customerAppTypeRuleId": customerAppTypeRuleId,
 		"clockState": 0
 	},
+	"token": token,
 }
 # 提交打卡
 response = requests.post(sign_url, json=jsons)
