@@ -12,6 +12,7 @@ stuNo = input()
 username = input()
 userid = input()
 sckey = input()
+referer = input()
 # 时间判断
 now = (time.localtime().tm_hour + 8) % 24
 
@@ -60,8 +61,15 @@ jsons = {
 	},
 	"token": "1ec203ac-f317-484a-9291-f7973284d164"
 }
+# 提交打卡、
+url = "https://reportedh5.17wanxiao.com/sass/api/epmpics"
 # 提交打卡
-response = requests.post(sign_url, json=jsons)
+headers = {
+  'Referer': referer,
+  'Content-Type': 'application/json'
+}
+response = requests.request("POST", url, headers=headers, data = json.dumps(jsons))
+# response = requests.post(sign_url, json=jsons)
 time.sleep(10)
 utcTime = (datetime.datetime.utcnow() + datetime.timedelta(hours=8))
 cstTime = utcTime.strftime("%H时%M分%S秒")
