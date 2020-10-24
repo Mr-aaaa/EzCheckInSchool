@@ -36,5 +36,5 @@ jobs:
         ${{secrets.USERNAME}}
         ${{secrets.USERID}}
         ${{secrets.SCKEY}}
-        ${{sercrets.REFERER}}
+        ${{secrets.REFERER}}
         EOF
