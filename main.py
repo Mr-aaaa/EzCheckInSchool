@@ -15,8 +15,8 @@ sckey = input()
 # 时间判断
 now = (time.localtime().tm_hour + 8) % 24
 
-if (now >= 12) & (now < 18):
-    templateid = "clockSign3"
+if (now >= 11) & (now < 18):
+    templateid = "clockSign2"
     customerAppTypeRuleId = 147
 else:
     print("现在是%d点%d分，打卡时间将自动打卡" %(now,time.localtime().tm_min))
