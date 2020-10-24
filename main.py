@@ -59,7 +59,7 @@ jsons = {
 		"customerAppTypeRuleId": customerAppTypeRuleId,
 		"clockState": 0
 	},
-	"token": token,
+	"token": token
 }
 # 提交打卡
 response = requests.post(sign_url, json=jsons)
