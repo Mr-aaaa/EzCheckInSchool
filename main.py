@@ -16,7 +16,7 @@ referer = input()
 # 时间判断
 now = (time.localtime().tm_hour + 8) % 24
 
-if (now >= 11) & (now < 18):
+if (now >= 11) & (now < 15):
     templateid = "clockSign2"
     customerAppTypeRuleId = 147
 else:
@@ -59,7 +59,7 @@ jsons = {
 		"customerAppTypeRuleId": customerAppTypeRuleId,
 		"clockState": 0
 	},
-	"token": "1ec203ac-f317-484a-9291-f7973284d164"
+	"token": token
 }
 # 提交打卡、
 url = "https://reportedh5.17wanxiao.com/sass/api/epmpics"
