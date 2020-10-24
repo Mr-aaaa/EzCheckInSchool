@@ -57,7 +57,9 @@ jsons = {
 			}
 		],
 		"customerAppTypeRuleId": customerAppTypeRuleId,
-		"clockState": 0
+		"clockState": 0,
+		"token": token
+
 	},
 	"token": token
 }
