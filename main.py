@@ -13,6 +13,7 @@ username = input()
 userid = input()
 sckey = input()
 referer = input()
+token = input()
 # 时间判断
 now = (time.localtime().tm_hour + 8) % 24
 
